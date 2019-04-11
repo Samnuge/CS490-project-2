@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--
+Sam Nugent 
+CS special Topics
+10/1/17
+-->
+<html>
+    <head>
+        <style>
+            .head{
+             width: 80%;
+             margin: 50px auto;
+            }
+
+            
+            .marqueeBar{
+             border-top: 1px solid #dfdfdf;
+             border-bottom: 1px solid #dfdfdf;
+             width: 100%;
+             height: 30px;
+             display: inline-flex;
+            }
+            
+            .latest{
+                padding: 5px;
+                color: #ffffff;
+                background-color: blue;
+            }
+            
+            .marqueeBar span {
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+            }
+            
+            .Scroll {
+            margin: 5px;
+            line-height: 30px;
+            text-align: center;
+            vertical-align: middle;
+            }   
+            
+            .Scroll img{
+                width: 15px;
+                height: 20px;
+                text-align: center;
+                vertical-align: middle;
+            }
+            
+            .marqueeBar span{
+               margin-left: 20px;
+               margin-right: 20px;
+               cursor: pointer;
+            }
+            
+            .marqueeBar span:hover {
+                text-decoration: underline;
+            }
+            
+            
+            
+            .content{
+                border-radius: 3px;
+                border: 1px solid #dfdfdf;
+                background-color: #f0f0f0;
+                width: 100%;
+                display: inline-flex;  
+            }
+            
+            .contentstyle{
+                padding: 10px;
+                width: 100%;
+                height: auto;
+            }
+            .contentstyle p{
+                margin-bottom: 20px;
+            }
+            
+            .date{
+  
+                font-size: 13px;
+                color: gray;
+            }
+            
+            .title{
+                font-size: 18px;
+                margin-top: 15px;
+            }
+            
+            .text{
+                font-size:17px;
+                line-height: 1.4;
+            }
+            
+            .image{
+               margin: 10px;
+               position: relative;
+               width: 200px;
+               height: 200px;
+               top:50%;
+            }
+            
+            .images{
+               margin: 10px;
+               width: 200px;
+               height: 200px;   
+            }
+            
+            .label{
+                
+                color: white;
+                height: 50px;
+                width: 0px;;
+                position: absolute;
+                text-align: center;
+                vertical-align: middle;
+                line-height: 40px;
+                top: 160px;
+                background-color: rgba(220,220,220,.5);
+                -webkit-transition: width 0.5s;
+                -moz-transition:  width 0.5s;
+                transition: width 0.5s;
+                
+            }
+            
+            .label div{
+                text-wrap: none;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: clip; 
+            }
+            
+            .images:hover .label{
+                width: 100%;
+            }
+            
+        </style>
+        <title>Project 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class = "head">
+            <div class ="marqueeBar">
+                <span class="latest"> Latest </span>
+                <span class ="Scroll">
+                <marquee onmouseover="this.stop();" onmouseleave="this.start();">
+                   <span>LeBron sets tone at Cavs media day </span>
+                    <img src="img/NBA.jpg" alt="NBA" />
+                    <span>Rajon Rondo breaks hand in fall </span>
+                    <img src="img/NBA.jpg" alt="NBA" />
+                    <span>LeBron: Patience is key for Cavs </span>
+                    <img src="img/NBA.jpg" alt="NBA" />
+                    <span>Jackson: Knicks can make playoffs </span>
+                    <img src="img/NBA.jpg" alt="NBA" />
+                    <span>Grizzlies sign F Michael Beasley </span>
+                </marquee>
+                </span>
+            </div>
+            
+            
+            
+            
+            <div class ="content">
+                <div class = "contentstyle">
+                <p class ="title"><b>LeBron sets tone at Cavs media day </b></p>
+                <p class = "date">September 27, 2014</p>
+                <p class = "text"> INDEPENDENCE, Ohio -- The satellite trucks started lining up for a
+spot close to the Cleveland Cavaliers' training facility early Friday morning. A huge tent was
+erected onsite as a temporary media workroom to accommodate the hundreds of reporters on
+hand for LeBron James' official return to the Cavs. He never did have a news conference this
+summer, if you remember. So whatever party the city of Cleveland was going to throw to
+celebrate the return of its prodigal son had to be Friday. </p>
+                
+                </div>
+                
+               
+                <div onmouseenter="this.children[1].innerHTML = 'Lebron James';" onmouseleave="this.children[1].innerHTML = '';" id="image" class="image">
+                    <img class = "images" src="img/james.jpg" alt="LeBron James"/>
+                    <div class ="label"> Lebron James</div>
+                </div>
+          
+            </div>
+        </div>
+    </body>
+</html>
